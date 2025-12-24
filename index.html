@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <title>Elegance Store | Create an account</title>
+</head>
+
+<body class="bg-white">
+    <section class="flex flex-col lg:flex-row min-h-screen w-full">
+        <div class="hidden lg:flex lg:w-1/2 relative overflow-hidden border-r-yellow-400">
+            <img src="assets/images/bg.webp" alt="Elegance fashion" loading="lazy"
+                class="absolute inset-0 w-full h-full object-cover">
+            <div
+                class="absolute inset-0 bg-linear-to-b from-black/20 via-black/40 to-black/60 flex flex-col items-center justify-center text-white p-12 text-center">
+                <div class="border border-white/40 p-10 backdrop-blur-md bg-white/5 shadow-2xl">
+                    <div class="absolute top-0 left-0 w-10 h-10 border-t-2 border-l-2 border-yellow-400/90"></div>
+                    <h2
+                        class="bg-linear-to-r from-yellow-300 via-amber-200 to-yellow-400 bg-clip-text tracking-widest text-transparent text-5xl mb-6 font-bold">
+                        ELEGANCE</h2>
+                    <p class="text-lg tracking-widest font-medium uppercase mt-4">A world of elegance awaits you</p>
+                    <div class="absolute bottom-0 right-0 w-10 h-10 border-b-2 border-r-2 border-yellow-400/90"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full lg:w-1/2 flex items-center justify-center p-6 md:p-10 bg-black">
+            <div class="max-w-md w-full">
+                <!-- Logo Elegance -->
+                <div class="mb-10 flex justify-center">
+                    <img class="h-20 object-contain" src="assets/images/logo.webp" alt="Logo Elegance" loading="lazy">
+                </div>
+
+                <form id="registerForm" class="space-y-6" action="">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                        <div class="group">
+                            <label for="firstName"
+                                class="block text-sm uppercase tracking-widest text-gray-50 mb-1">First Name</label>
+                            <div class="relative">
+                                <span class="absolute left-0 top-1/2 -translate-y-1/2 text-gray-400/40">
+                                    <i class="fas fa-user text-sm"></i>
+                                </span>
+                                <input type="text" id="firstName" name="firstName"
+                                    class="w-full border-b border-gray-50 py-1 px-6 bg-transparent outline-none transition-colors duration-300 focus:border-yellow-400 text-white"
+                                    required>
+                            </div>
+
+                            <span id="firstnameError" class="message-error">First name is required</span>
+                        </div>
+
+                        <div class="group">
+                            <label for="lastName" class="block text-sm uppercase tracking-widest text-gray-50 mb-1">Last
+                                Name</label>
+                            <div class="relative">
+                                <span class="absolute left-0 top-1/2 -translate-y-1/2 text-gray-400/40">
+                                    <i class="fas fa-user text-sm"></i>
+                                </span>
+                                <input type="text" id="lastName" name="lastName"
+                                    class="w-full border-b border-gray-50 py-1 px-6 bg-transparent outline-none transition-colors duration-300 focus:border-yellow-400 text-white"
+                                    required>
+                            </div>
+                            <span id="lastnameError" class="message-error">Last name is required</span>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="group">
+                        <label for="email" class="block text-sm uppercase tracking-widest text-gray-50 mb-1">Email
+                            Address</label>
+                        <div class="relative">
+                            <span class="absolute left-0 top-1/2 -translate-y-1/2 text-gray-100/40">
+                                <i class="fas fa-envelope text-sm"></i>
+                            </span>
+                            <input type="email" id="email" name="email" placeholder="example@gmail.com"
+                                class="w-full border-b border-gray-50 py-1 px-6 bg-transparent outline-none transition-colors duration-300 focus:border-yellow-400 text-white"
+                                required>
+                            <span id="emailError" class="message-error">Invalid email address</span>
+                        </div>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="group">
+                        <label for="password"
+                            class="block text-sm uppercase tracking-widest text-gray-50 mb-1">Password</label>
+                        <div class="relative">
+                            <span
+                                class="absolute left-0 top-1/2 -translate-y-1/2 text-gray-400/40 group-focus-within:text-yellow-400 transition-colors">
+                                <i class="fas fa-lock text-sm"></i>
+                            </span>
+                            <input type="password" id="password" name="password"
+                                class="w-full border-b border-gray-50 py-1 pl-7 bg-transparent outline-none transition-colors duration-300 focus:border-yellow-400 text-white"
+                                required>
+                            <button type="button" id="togglePassword"
+                                class="absolute right-0 top-1/2 -translate-y-1/2 text-gray-400/40 hover:text-yellow-400 transition-colors">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="w-full">
+                            <div id="passwordStrength" class="h-0.5 w-0 mt-1 bg-gray-400 transition-all duration-300">
+                            </div>
+                            <div id="passwordStrengthText" class="text-xs mt-1 h-4"></div>
+                        </div>
+                        <span id="passwordError" class="message-error">A password is required (minimum of 6
+                            characters)</span>
+                    </div>
+
+                    <!-- Confirm Password -->
+                    <div class="group">
+                        <label for="confirmPassword"
+                            class="block text-sm uppercase tracking-widest text-gray-50 mb-1">Confirm
+                            Password</label>
+                        <div class="relative">
+                            <span
+                                class="absolute left-0 top-1/2 -translate-y-1/2 text-gray-400/40 group-focus-within:text-yellow-400 transition-colors">
+                                <i class="fas fa-shield-halved text-sm"></i>
+                            </span>
+                            <input type="password" id="confirmPassword" name="confirmPassword"
+                                class="w-full border-b border-gray-100 py-1 px-7 bg-transparent outline-none transition-colors duration-300 focus:border-yellow-400 text-white"
+                                required>
+                        </div>
+
+                        <span id="confirmPasswordError" class="message-error">Passwords do not match</span>
+                    </div>
+
+                    <div class="flex items-center gap-3 py-2">
+                        <input type="checkbox" id="terms" class="w-4 h-4 accent-yellow-400 cursor-pointer" required>
+                        <label for="terms" class="text-sm text-gray-100 tracking-tight">I agree to <a href="#"
+                                class="text-white underline hover:text-yellow-400 transition-colors">Privacy
+                                Policy</a>
+                            and <a href="#" class="text-white underline hover:text-yellow-400 transition-colors">Terms
+                                Of Service</a></label>
+                    </div>
+
+                    <button type="submit"
+                        class="group relative w-full bg-linear-to-r from-yellow-300 via-white to-yellow-300 text-black py-4 overflow-hidden rounded-full transition-all duration-500 cursor-pointer">
+                        <span class="relative z-10 text-md font-bold uppercase tracking-widest">Create an
+                            account</span>
+                        <div
+                            class="absolute inset-0 bg-linear-to-r from-yellow-200 via-amber-300 to-yellow-200 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                        </div>
+                    </button>
+                </form>
+
+                <div class="mt-8 text-center">
+                    <span class="text-sm text-gray-100 uppercase tracking-widest">you already have an account ?</span>
+                    <a href="#"
+                        class="text-white font-bold border-b border-block ml-1 hover:text-yellow-400 hover:border-yellow-400 transition-colors">Login</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="successModal" class="fixed inset-0 bg-black/50 hidden items-center justify-center p-4">
+            <div class="bg-black rounded-xl p-8 max-w-sm w-full text-center shadow-2xl">
+                <div
+                    class="w-12 h-12 bg-yellow-100/10 text-yellow-300 rounded-full flex items-center justify-center mb-5 p-4">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h2 class="text-xl font-bold text-gray-50 mb-2">You're Offiicially In, Gorgeous!</h2>
+                <p class="text-gray-200 mb-6">Your account has been created. Get ready to glow with our latest arrivals
+                    in fashion and beauty.</p>
+                <button onclick="closeModal()"
+                    class="w-full bg-linear-to-r from-yellow-300 via-white to-yellow-300 text-black font-bold py-2 rounded-lg">Let's
+                    Go Shopping</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
