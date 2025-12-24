@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  font-family: 'Open-Sans';
+}
+
+h1, h2 {
+  font-family: 'Bodoni Moda';
+}
+
+.group {
+  position: relative;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.group .absolute {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Error message styling */
+.message-error {
+  color: #850707 !important;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  text-transform: none;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+}
+
+.message-error.show-error {
+  opacity: 1;
+  height: auto;
+  margin-top: 4px;
+}
+
+input.border-red-500 {
+  border-bottom-color: #850707 !important;
+}
+
+input:focus {
+  border-bottom-color: #f59e0b !important;
+}
